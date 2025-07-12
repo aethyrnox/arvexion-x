@@ -1,4 +1,4 @@
-const API_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'; // Ganti dengan Web App URL Apps Script kamu
+const API_URL = 'https://script.google.com/macros/s/AKfycbwRFAbB8kktjfmj5-nDXgzbeQ8s3tGCKujRZbORFCEJH80LpCJEad5ND2Glou_tv78HGA/exec'; // Ganti dengan Web App URL Apps Script kamu
 
 // ================== LOGIN FUNCTION ==================
 function login() {
