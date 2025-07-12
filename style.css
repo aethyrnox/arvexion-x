@@ -83,3 +83,116 @@ body.login-body {
   font-size: 0.9rem;
   color: #ff4081;
 }
+body.forum-body {
+  background-color: #060606;
+  color: #0ff;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: rgba(0, 255, 255, 0.05);
+  border-right: 1px solid #00ffff33;
+  padding: 1rem;
+  box-shadow: 0 0 15px #00ffff33;
+}
+
+.sidebar-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #0ff;
+}
+
+.friend-list {
+  list-style: none;
+  padding: 0;
+  color: #ccc;
+}
+
+.friend-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 10px;
+  border-left: 2px solid #0ff;
+}
+
+/* Chat section */
+.chat-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+.forum-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #00fff7;
+  text-shadow: 0 0 10px #00fff7;
+}
+
+.chat-box {
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #00ffff22;
+  border-radius: 10px;
+  padding: 1rem;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 0 10px #00fff733;
+}
+
+.chat-message {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  background: rgba(0, 255, 255, 0.08);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.chat-input-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-input {
+  flex-grow: 1;
+  padding: 10px;
+  background: #111;
+  border: none;
+  color: #0ff;
+  border-radius: 8px;
+  box-shadow: inset 0 0 5px #0ff;
+}
+
+.file-upload {
+  color: #0ff;
+}
+
+.send-button {
+  background: transparent;
+  border: 2px solid #0ff;
+  color: #0ff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.send-button:hover {
+  background-color: #00fff733;
+  box-shadow: 0 0 10px #00ffff, 0 0 30px #00ffff66;
+}
