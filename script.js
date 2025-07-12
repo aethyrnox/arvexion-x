@@ -10,25 +10,29 @@ function login() {
     return;
   }
 
-  fetch(API_URL, {
+  const formData = new FormData();
+  formData.append("mode", "login");
+  formData.append("email", email);
+
+  fetch("https://script.google.com/macros/s/AKfycbwRFAbB8kktjfmj5-nDXgzbeQ8s3tGCKujRZbORFCEJH80LpCJEad5ND2Glou_tv78HGA/exec", {
     method: "POST",
-    body: JSON.stringify({ mode: "login", email }),
-    headers: { "Content-Type": "application/json" }
+    body: formData
   })
-    .then(res => res.json())
-    .then(data => {
-      if (data.success) {
-        localStorage.setItem("userEmail", email);
-        window.location.href = "main.html";
-      } else {
-        status.textContent = "Access denied. Email not registered.";
-      }
-    })
-    .catch(err => {
-      console.error(err);
-      status.textContent = "Server error.";
-    });
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      localStorage.setItem("userEmail", email);
+      window.location.href = "main.html";
+    } else {
+      status.textContent = "Access denied. Email not registered.";
+    }
+  })
+  .catch(err => {
+    console.error(err);
+    status.textContent = "Server error. Coba lagi nanti.";
+  });
 }
+
 
 // ================== SEND MESSAGE FUNCTION ==================
 function sendMessage() {
