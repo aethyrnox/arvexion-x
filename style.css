@@ -1,1 +1,85 @@
+body.login-body {
+  background-color: #0a0a0a;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #00fff7;
+  overflow: hidden;
+}
 
+.login-container {
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid #00ffff33;
+  box-shadow: 0 0 30px #00fff799;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.subtitle {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #111;
+  color: #0ff;
+  box-shadow: inset 0 0 5px #0ff;
+  outline: none;
+}
+
+.login-button {
+  background: transparent;
+  border: 2px solid #0ff;
+  color: #0ff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #00fff733;
+  box-shadow: 0 0 10px #00ffff, 0 0 30px #00ffff66;
+}
+
+.glass-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+  transform: skewX(-20deg);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}
+
+.status-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ff4081;
+}
