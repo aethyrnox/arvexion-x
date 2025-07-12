@@ -196,3 +196,9 @@ body.forum-body {
   background-color: #00fff733;
   box-shadow: 0 0 10px #00ffff, 0 0 30px #00ffff66;
 }
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
