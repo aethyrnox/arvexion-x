@@ -1,4 +1,4 @@
-const API_URL = 'https://script.google.com/macros/s/AKfycbwRFAbB8kktjfmj5-nDXgzbeQ8s3tGCKujRZbORFCEJH80LpCJEad5ND2Glou_tv78HGA/exec'; // Ganti dengan Web App URL Apps Script kamu
+const API_URL = 'https://script.google.com/macros/s/AKfycbxtzEW8CE5Sid-YCweMdzx-awrFswXVhWM4jXlg5piD4EyK2BbP0Js6gLGoyP9NpJpttg/exec'; // Ganti dengan Web App URL Apps Script kamu
 
 // ================== LOGIN FUNCTION ==================
 function login() {
@@ -14,7 +14,7 @@ function login() {
   formData.append("mode", "login");
   formData.append("email", email);
 
-  fetch("https://script.google.com/macros/s/AKfycbwRFAbB8kktjfmj5-nDXgzbeQ8s3tGCKujRZbORFCEJH80LpCJEad5ND2Glou_tv78HGA/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbxtzEW8CE5Sid-YCweMdzx-awrFswXVhWM4jXlg5piD4EyK2BbP0Js6gLGoyP9NpJpttg/exec", {
     method: "POST",
     body: formData
   })
