@@ -113,3 +113,35 @@ function loadChat() {
 if (window.location.pathname.includes("main.html")) {
   loadChat();
 }
+// REGISTER MENU
+function register() {
+  const email = document.getElementById('email').value;
+  const status = document.getElementById('status');
+
+  if (!email) {
+    status.textContent = "Please enter your email.";
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append("mode", "register");
+  formData.append("email", email);
+
+  fetch(API_URL, {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      localStorage.setItem("userEmail", email);
+      window.location.href = "main.html";
+    } else {
+      status.textContent = data.message || "Failed to register.";
+    }
+  })
+  .catch(err => {
+    console.error(err);
+    status.textContent = "Server error.";
+  });
+}
