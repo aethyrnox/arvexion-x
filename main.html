@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arvexion-X | Forum</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body class="forum-body">
+  <div class="main-container">
+    
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2 class="sidebar-title">FRIENDS</h2>
+      <ul class="friend-list">
+        <li>🌐 CyberGhost</li>
+        <li>⚡ TechNova</li>
+        <li>🔒 Glitch-X</li>
+      </ul>
+    </div>
 
+    <!-- CHAT AREA -->
+    <div class="chat-section">
+      <h1 class="forum-title">ARVEXION-X FORUM</h1>
+      
+      <!-- CHAT HISTORY -->
+      <div id="chat-box" class="chat-box">
+        <!-- Chat messages will be injected here -->
+      </div>
+
+      <!-- INPUT -->
+      <div class="chat-input-area">
+        <input type="text" id="message" placeholder="Type your message..." class="chat-input"/>
+        <input type="file" id="fileUpload" class="file-upload"/>
+        <button onclick="sendMessage()" class="send-button"><span class="glass-effect">Send</span></button>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
